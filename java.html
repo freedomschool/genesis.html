@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Alert Example</title>
+  </head>
+  <body>
+  <form id="myform">
+    <p>텍스트 입력 : <input type="text" id="txt"> </p>
+
+    <p>비밀번호 입력 : <input type="password" id="pw"></p>
+
+    <input type="checkbox" name="ck" value="phone"> 모바일
+    <input type="checkbox" name="ck" value="computer"> 컴퓨터 <br>
+
+
+    <label for="male">남성</label>
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="female">여성</label>
+    <input type="radio" name="gender" id="female" value="female">
+
+
+    <p>색 선택 : <input type="color" id="c"></p>
+
+    <p>생년.월.일 : <input type="date" id="d"></p>
+
+    <p><input type="range" id="r" min="0" max="10" value="5" ></p>
+
+    <p>수량 (1과 10중): <input type="number" id="num" min="1" max="10" value="1" step="1"></p>
+
+    <select id="selectbox">
+      <option value="select1">선택1</option>
+      <option value="select2">선택2</option>
+      <option value="select3">선택3</option>
+      <option value="select4">선택4</option>
+    </select>
+
+    <textarea id="textarea" cols="10" rows="5"></textarea>
+
+    <input type="submit" value="submit" onclick="printdata()">
+
+
+<script>  
+
+  function printdata() {
+    var f = document.getElementById('myform');
+
+    var txt = "";
+
+    for (var i = 0; i < f.length-1; i++) {
+        if (f.elements[i].type == "checkbox") {
+          if (f.elements[i].checked)
+              txt += f.elements[i].type + ' : ' + f.elements[i].value + '\n';
+        }else if (f.elements[i].type == "radio") {
+            if (f.elements[i].checked)
+                 txt += f.elements[i].type + ' : ' + f.elements[i].value + '\n';
+                 else {
+                   txt += f.elements[i].type + ' : '+ f.elements[i].value + '\n';
+
+        } {
+
+            }
+            Alert(txt);
+
+</script>
+  </form>
+  </body>
+</html>
